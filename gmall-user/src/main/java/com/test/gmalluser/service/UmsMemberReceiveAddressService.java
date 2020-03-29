@@ -8,4 +8,6 @@ import java.util.List;
 @Service
 public interface UmsMemberReceiveAddressService {
     List<UmsMemberReceiveAddress> findAllAddress();
+
+    void deleteAddressById();
 }

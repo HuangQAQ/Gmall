@@ -14,10 +14,19 @@ public class UmsMemberReceiveAddressServiceImpl implements UmsMemberReceiveAddre
 
     @Autowired
     UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
+    private Object UmsMemberReceiveAddress;
 
     @Override
     public List<UmsMemberReceiveAddress> findAllAddress() {
         List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.selectAll();
         return umsMemberReceiveAddresses;
     }
+
+    @Override
+    public void deleteAddressById() {
+        umsMemberReceiveAddressMapper.deleteByPrimaryKey(UmsMemberReceiveAddress);
+        return ;
+    }
+
+
 }
